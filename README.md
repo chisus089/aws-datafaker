@@ -62,6 +62,8 @@ Choose 1, 1, N, choose your python dist (20), 1, N, N, N, choose a project name
 
 A folder with a new SAM application should 
 
+Check more details on how to start with SAM applications [here](SAM-README.md)
+
 #### 2. Write json data to S3 using faker and AWS SAM Function
     
 [Faker](https://pypi.org/project/Faker/) is a Python package that generates fake data.
