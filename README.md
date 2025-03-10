@@ -289,11 +289,21 @@ Use athena to query the parquet files created:
 
 https://calculator.aws/#/createCalculator/Lambda
 
+Estimating the AWS Lambda cost:
+
 ![alt text](imgs/image20.png)
 
-Estimating a job of 45s per 1000000 executions ~ 340 USD
+Estimating cost for 1 Glue Job running per 45s per 1000000 executions ~ 340 USD
 
 ![alt text](imgs/image-21.png)
+
+Estimating S3 cost:
+
+![alt text](imgs/image30.png)
+
+Estimating AWS Athena:
+
+![alt text](imgs/image-31.png)
 
 ## To-do
 
