@@ -57,13 +57,13 @@ Create a working folder
 
 `cd sam-apps`
 
-![alt text](image.png)
+![alt text](imgs/image0.png)
 
 Create a new application using command:
 
 `sam init`
 
-![alt text](image-1.png)
+![alt text](imgs/image-11.png)
 
 Choose: 
 - 1, 
@@ -80,7 +80,7 @@ A folder with a new SAM application should
 
 Check the Hello-World Function available [here](SAM-README.md)
 
-![alt text](image-2.png)
+![alt text](imgs/image-12.png)
 
 #### 2. Write json data to S3 using faker and AWS SAM Function
 
@@ -238,22 +238,23 @@ Run `s3JsonToS3Parquet.py`. Go to S3 to view the parquet files.
 
 
 ## Trigger
-#### 7. Create a Lambda function to start AWS Glue Job
+#### 7. Create a TriggerLambda function to start AWS Glue Job
 
 Follow https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example.html instructions to create a lambda function that monitors a given folder and invokes a glue job
 
 `nano functions/s3_trigger/s3LambdaTriggerFunction.py`
 
 
-#### 8. Create a S3 trigger
+#### 8. Associate the TriggerLambda to a S3 bucket
 
+![alt text](imgs/image-17.png)
 
 ## Invoke
 #### 9. Invoke process concurrently using AWS SAM
 
 Go to AWS console, and the to the deployed gluejob, change maximum concurrency to 5 ot 10 for following part. 
 
-![alt text](image-4.png)
+![alt text](imgs/image-14.png)
 
 
 Invoke previously deployed lambda function concurrently by using a map function. The lambdas will be executed in parallel, and then each lambda will call an independent glue job.
@@ -265,9 +266,11 @@ You can set the value to 10k, 100k, or 1M to generate any given number of users 
 
 <img src="imgs/image-7.png" alt="img7" width="100%">
 
-![alt text](image-3.png)
+![alt text](imgs/image-13.png)
 
+Review that argument --FILE_KEY is being passed correctly:
 
+![alt text](imgs/image-16.png)
 
 ## Analyze
 #### 10. Query data in AWS Athena
@@ -277,7 +280,7 @@ Use athena to query the parquet files created:
 `SELECT * FROM "fake_database"."fake_db" limit 100;`
 
 
-![alt text](image-5.png)
+![alt text](imgs/image-15.png)
 
 ## To-do
 
