@@ -282,6 +282,16 @@ Use athena to query the parquet files created:
 
 ![alt text](imgs/image-15.png)
 
+## Cost estimation
+
+https://calculator.aws/#/createCalculator/Lambda
+
+![alt text](imgs/image20.png)
+
+Estimating a job of 45s per 1000000 executions ~ 340 USD
+
+![alt text](imgs/image-21.png)
+
 ## To-do
 
 
