@@ -46,6 +46,9 @@ The following ìmgs/imgs/image represents the pipeline in a graphic way.
 - [Analyze data](#Analyze)
     - Query data in AWS Athena
 
+- [Estimate cost](#Estimate)
+    - Estimate cost using AWS Cost Estimator
+
 ## Generate-data
 #### 1. Install AWS Serverless Application Model
 
